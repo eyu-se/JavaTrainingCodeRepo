@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author eyu
  */
-public class Section {
+public class Section extends InventoryComponent {
     
     private int sectionID;
     private String aisleName;

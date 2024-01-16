@@ -9,7 +9,7 @@ package et.com.inhousetraining.L12.models;
  *
  * @author eyu
  */
-public class Item {
+public class Item extends InventoryComponent {
     
     private int itemID;
     private String name;

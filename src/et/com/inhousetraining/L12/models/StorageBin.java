@@ -9,7 +9,7 @@ package et.com.inhousetraining.L12.models;
  *
  * @author eyu
  */
-public class StorageBin {
+public class StorageBin extends InventoryComponent{
     
     private int binID;
     private int sectionID;

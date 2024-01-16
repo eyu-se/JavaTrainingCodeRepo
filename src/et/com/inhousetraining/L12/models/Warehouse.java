@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author eyu
  */
-public class Warehouse {
+public class Warehouse extends InventoryComponent {
     
     private int warehouseID;
     private String location;
