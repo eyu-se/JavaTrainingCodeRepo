@@ -196,8 +196,10 @@ public class InventoryManager {
     public void showAllWareHouses(){
         if(!inventoryService.getAllWarehouses().isEmpty()){
             for(Warehouse warehouse: inventoryService.getAllWarehouses()){
-
+                
+                warehouse.display();
                 displayWareHouse(warehouse);
+                
 
             }
         }else{
