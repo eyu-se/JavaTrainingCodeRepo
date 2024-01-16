@@ -88,4 +88,18 @@ public class Warehouse extends InventoryComponent {
         this.sections = sections;
     }
     
+    
+    @Override
+    public void display() {
+        
+        System.out.println("Warehouse ID : "+this.getWarehouseID());
+        System.out.println("Warehouse Location : "+this.getLocation());
+        System.out.println("Warehouse current Qualtity : "+this.getCurrentQuantity());
+        System.out.println("Warehouse Maximum Capacity : "+this.getMaxCapacity());
+        System.out.println("Warehouse has "+ (this.getSections()!= null ? this.getSections().size():0) +" Sections");
+
+                               
+
+    }
+    
 }

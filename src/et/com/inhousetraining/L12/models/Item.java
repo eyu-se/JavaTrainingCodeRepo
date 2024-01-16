@@ -57,4 +57,13 @@ public class Item extends InventoryComponent {
         this.Description = Description;
     }
     
+    @Override
+    public void display() {
+        System.out.println("Item ID :"+this.getItemID());
+        System.out.println("Item Name :"+this.getName());
+        System.out.println("Item Description :"+this.getDescription());
+
+    }
+
+    
 }

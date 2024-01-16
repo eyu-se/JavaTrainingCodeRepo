@@ -198,7 +198,7 @@ public class InventoryManager {
             for(Warehouse warehouse: inventoryService.getAllWarehouses()){
                 
                 warehouse.display();
-                displayWareHouse(warehouse);
+                
                 
 
             }
@@ -207,16 +207,7 @@ public class InventoryManager {
         }
     }
     
-    public void displayWareHouse(Warehouse warehouse){
-    
-        System.out.println("Warehouse ID : "+warehouse.getWarehouseID());
-        System.out.println("Warehouse Location : "+warehouse.getLocation());
-        System.out.println("Warehouse current Qualtity : "+warehouse.getCurrentQuantity());
-        System.out.println("Warehouse Maximum Capacity : "+warehouse.getMaxCapacity());
-        System.out.println("Warehouse has "+ (warehouse.getSections()!= null ?warehouse.getSections().size():0) +" Sections");
-
-                                                    
-    }
+   
     
     
     public static void displayMenu(String menuType, Scanner sc){

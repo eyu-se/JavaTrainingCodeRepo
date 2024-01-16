@@ -103,5 +103,20 @@ public class Section extends InventoryComponent {
         this.storageBins = storageBins;
     }
 
+    @Override
+    public void display() {
+        
+        System.out.println("Section ID :"+this.getSectionID());
+        System.out.println("Section AisleName :"+this.getAisleName());
+        System.out.println("Section CurrentQuantity :"+this.getCurrentQuantity());
+        System.out.println("Section MaxCapacity :"+this.getMaxCapacity());
+        System.out.println("Section getShelfNumber :"+this.getShelfNumber());
+        System.out.println("Section has "+ (this.getStorageBins()!= null ? this.getStorageBins().size():0) +" Storage Bins");
+
+
+    }
+    
+    
+
     
 }

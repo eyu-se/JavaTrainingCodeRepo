@@ -87,4 +87,17 @@ public class StorageBin extends InventoryComponent{
         this.maxCapacity = maxCapacity;
     }
     
+    
+    @Override
+    public void display() {
+        
+        System.out.println("StorageBin ID :"+this.getBinID());
+        System.out.println("StorageBin SectionId :"+this.getSectionID());
+        System.out.println("StorageBin ItemId :"+this.getItemId());
+        System.out.println("StorageBin CurrentQuantity :"+this.getQuantity());
+        System.out.println("StorageBin MaxCapacity :"+this.getMaxCapacity());
+
+
+    }
+    
 }
