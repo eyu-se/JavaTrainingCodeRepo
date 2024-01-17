@@ -14,13 +14,26 @@ import java.util.List;
  */
 public class WarehouseRepository {
     
-    private static List<Warehouse> warehouses = new ArrayList<>();;
+    private static List<Warehouse> warehouses = new ArrayList<>();
 
     
     public void addWarehouse(Warehouse warehouse) {
         warehouses.add(warehouse);
     }
+    
+    public void deleteWarehouse(int warehouseId){
+        
+//        Warehouse warehouseToDelete = this.getWarehouseById(warehouseId);
+//        warehouses.remove(warehouseToDelete);
 
+        for (int i = 0; i < warehouses.size(); i++) {
+            if(warehouseId == warehouses.get(i).getWarehouseID()){
+                warehouses.remove(i);
+                break;
+            }
+        }
+        
+    }
     public Warehouse getWarehouseById(int warehouseId) {
         for (Warehouse warehouse : warehouses) {
             if (warehouse.getWarehouseID() == warehouseId) {
