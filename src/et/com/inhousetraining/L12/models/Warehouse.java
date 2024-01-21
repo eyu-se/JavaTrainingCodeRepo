@@ -4,6 +4,7 @@
  */
 package et.com.inhousetraining.L12.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ public class Warehouse extends InventoryComponent {
     private String location;
     private int currentQuantity;
     private int maxCapacity;
-    private List<Section> sections;
+    private List<Section> sections = new ArrayList<>();
 
     /**
      * @return the warehouseID

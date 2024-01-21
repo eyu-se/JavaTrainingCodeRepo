@@ -28,6 +28,7 @@ public class InventoryService {
     // Warehouse Operations
 
     public void addWarehouse(Warehouse warehouse) {
+        
         warehouseRepository.addWarehouse(warehouse);
     }
 
@@ -46,6 +47,7 @@ public class InventoryService {
     // Section Operations
 
     public void addSection(Section section, Warehouse warehouse ) {
+        
         SectionRepository sr = new SectionRepository(warehouse.getSections());
         sr.addSection(section);
         warehouse.setSections(sr.getAllSections());
