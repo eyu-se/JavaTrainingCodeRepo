@@ -15,6 +15,15 @@ public class Item extends InventoryComponent {
     private String name;
     private String Description;
 
+    public Item(int itemID, String name, String Description) {
+        this.itemID = itemID;
+        this.name = name;
+        this.Description = Description;
+    }
+    
+    public Item() {
+    }
+
     /**
      * @return the itemID
      */

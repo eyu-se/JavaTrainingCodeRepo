@@ -9,7 +9,7 @@ package et.com.inhousetraining.L12.models;
  * @author eyu
  */
 public class InventoryComponent {
-    protected String type = "InventoryComponent";
+    protected String type = this.getClass().getSimpleName();;
     
     public String getType(){
         return this.type;
@@ -17,7 +17,7 @@ public class InventoryComponent {
     
     public void display(){
         
-        System.out.println("ObjectID : " +this.toString());
+        System.out.println("This is "+type);
         
     }
     

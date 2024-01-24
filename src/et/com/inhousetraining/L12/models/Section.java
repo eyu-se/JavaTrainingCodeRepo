@@ -4,7 +4,7 @@
  */
 package et.com.inhousetraining.L12.models;
 
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -17,7 +17,17 @@ public class Section extends InventoryComponent {
     private int shelfNumber;
     private int maxCapacity;
     private int currentQuantity = 0;
-    private List<StorageBin> storageBins;
+    private List<StorageBin> storageBins = new ArrayList<>();
+
+    public Section(int sectionID, String aisleName, int shelfNumber, int maxCapacity) {
+        this.sectionID = sectionID;
+        this.aisleName = aisleName;
+        this.shelfNumber = shelfNumber;
+        this.maxCapacity = maxCapacity;
+    }
+    
+    public Section(){
+    }
 
     /**
      * @return the sectionID

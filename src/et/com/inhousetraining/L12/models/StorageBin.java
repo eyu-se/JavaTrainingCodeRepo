@@ -17,6 +17,16 @@ public class StorageBin extends InventoryComponent{
     private int quantity = 0;
     private int maxCapacity;
 
+    public StorageBin(int binID, int sectionID, int itemId, int maxCapacity) {
+        this.binID = binID;
+        this.sectionID = sectionID;
+        this.itemId = itemId;
+        this.maxCapacity = maxCapacity;
+    }
+    
+    public StorageBin(){
+    }
+
     /**
      * @return the binID
      */
