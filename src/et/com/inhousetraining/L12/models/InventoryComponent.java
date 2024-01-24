@@ -17,7 +17,7 @@ public class InventoryComponent {
     
     public void display(){
         
-        System.out.println("This is "+type);
+        System.out.println("This is "+ type);
         
     }
     

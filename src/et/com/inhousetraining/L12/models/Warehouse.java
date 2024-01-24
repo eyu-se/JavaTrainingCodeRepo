@@ -118,10 +118,10 @@ public class Warehouse extends InventoryComponent implements Cloneable {
 
     @Override
     public void display() {
-
+        super.display();
         System.out.println("Warehouse ID : " + this.getWarehouseID());
         System.out.println("Warehouse Location : " + this.getLocation());
-        System.out.println("Warehouse current Qualtity : " + this.getCurrentQuantity());
+        System.out.println("Warehouse current Quantity : " + this.getCurrentQuantity());
         System.out.println("Warehouse Maximum Capacity : " + this.getMaxCapacity());
         System.out.println("Warehouse has " + (this.getSections() != null ? this.getSections().size() : 0) + " Sections");
 

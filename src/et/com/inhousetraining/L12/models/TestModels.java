@@ -4,6 +4,7 @@
  */
 package et.com.inhousetraining.L12.models;
 
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,14 +13,26 @@ import java.util.logging.Logger;
  * @author eyu
  */
 public class TestModels {
+
     public static void main(String[] args) {
         
-        
-        InventoryComponent it = new InventoryComponent();
-        it.display();
-        
-        Item item1 = new Item();
-        System.out.println(item1.getType());
+//        InventoryComponent ic = new Warehouse();
+//        List<InventoryComponent> ics = new ArrayList<Warehouse>();    
+//        
+//        Warehouse ws1 = new Warehouse(1, "Addis Ababa", 0, 1000);
+//
+//        //printInventoryComponent(ws1);
+//        System.out.println(getID(ws1));
+//        
+//        Item ti1 = new Item(2, "Machinary", "Newly Arived Machinary");
+//        //printInventoryComponent(ti1);
+//        System.out.println(getID(ti1));
+
+//        
+//        InventoryComponent it = new InventoryComponent();
+//        it.display();
+//        Item item1 = new Item();
+//        System.out.println(item1.getType());
 //        Warehouse warehouse1 = new Warehouse();
 //        warehouse1.setCurrentQuantity(0);
 //        warehouse1.setLocation("DZ");
@@ -55,20 +68,22 @@ public class TestModels {
 //        }
 //        
 //
-
-        
-        
-        
     }
-    
-    
-    public static void printWarehouse(Warehouse ws){
-        System.out.println("Warehouse ID : "+ws.getWarehouseID());
-        System.out.println("Warehouse Location : "+ws.getLocation());
-        System.out.println("Warehouse Current Quantity : "+ws.getCurrentQuantity());
-        System.out.println("Warehouse Max Capacity : "+ws.getMaxCapacity());
 
+    static void printInventoryComponent(InventoryComponent ic) {
+        ic.display();
+    }
 
+    static int getID(InventoryComponent ic) {
+        printInventoryComponent(ic);
 
+        if (ic instanceof Item) {
+            return ((Item) ic).getItemID();
+        }
+        
+        if (ic instanceof Warehouse) {
+            return ((Warehouse) ic).getWarehouseID();
+        }
+        return 0;
     }
 }
