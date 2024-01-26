@@ -16,17 +16,15 @@ public class TestModels {
 
     public static void main(String[] args) {
         
-//        InventoryComponent ic = new Warehouse();
-//        List<InventoryComponent> ics = new ArrayList<Warehouse>();    
-//        
-//        Warehouse ws1 = new Warehouse(1, "Addis Ababa", 0, 1000);
-//
-//        //printInventoryComponent(ws1);
-//        System.out.println(getID(ws1));
-//        
-//        Item ti1 = new Item(2, "Machinary", "Newly Arived Machinary");
-//        //printInventoryComponent(ti1);
-//        System.out.println(getID(ti1));
+        
+        Warehouse ws1 = new Warehouse(1, "Addis Ababa", 0, 1000);
+
+        //printInventoryComponent(ws1);
+        System.out.println(getID(ws1));
+        
+        Item ti1 = new Item(2, "Machinary", "Newly Arived Machinary");
+        //printInventoryComponent(ti1);
+        System.out.println(getID(ti1));
 
 //        
 //        InventoryComponent it = new InventoryComponent();
