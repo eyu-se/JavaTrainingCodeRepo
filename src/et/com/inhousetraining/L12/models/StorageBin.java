@@ -17,6 +17,16 @@ public class StorageBin extends InventoryComponent{
     private int quantity = 0;
     private int maxCapacity;
 
+    public StorageBin(int binID, int sectionID, int itemId, int maxCapacity) {
+        this.binID = binID;
+        this.sectionID = sectionID;
+        this.itemId = itemId;
+        this.maxCapacity = maxCapacity;
+    }
+    
+    public StorageBin()
+    {
+    }
     /**
      * @return the binID
      */
@@ -98,6 +108,11 @@ public class StorageBin extends InventoryComponent{
         System.out.println("StorageBin MaxCapacity :"+this.getMaxCapacity());
 
 
+    }
+
+    @Override
+    public String convertToCSVFormat() {
+        return binID+","+sectionID+","+itemId+","+quantity+","+maxCapacity;
     }
     
 }

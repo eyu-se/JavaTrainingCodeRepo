@@ -19,6 +19,16 @@ public class Warehouse extends InventoryComponent {
     private int maxCapacity;
     private List<Section> sections = new ArrayList<>();
 
+    public Warehouse(int warehouseID, String location, int currentQuantity, int maxCapacity) {
+        this.warehouseID = warehouseID;
+        this.location = location;
+        this.currentQuantity = currentQuantity;
+        this.maxCapacity = maxCapacity;
+    }
+    
+    public Warehouse(){
+    }
+
     /**
      * @return the warehouseID
      */
@@ -102,5 +112,12 @@ public class Warehouse extends InventoryComponent {
                                
 
     }
+
+    @Override
+    public String convertToCSVFormat() {
+        return warehouseID+","+location+","+currentQuantity+","+maxCapacity;
+    }
+    
+    
     
 }

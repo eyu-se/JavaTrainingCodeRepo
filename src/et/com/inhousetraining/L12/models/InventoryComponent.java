@@ -8,17 +8,15 @@ package et.com.inhousetraining.L12.models;
  *
  * @author eyu
  */
-public class InventoryComponent {
+abstract public class InventoryComponent {
     protected String type = "InventoryComponent";
     
     public String getType(){
         return this.type;
     }
     
-    public void display(){
-        
-        System.out.println("ObjectID : " +this.toString());
-        
-    }
+    abstract public void display();
+    
+    abstract public String convertToCSVFormat();
     
 }

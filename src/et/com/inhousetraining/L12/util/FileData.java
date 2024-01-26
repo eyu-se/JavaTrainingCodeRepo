@@ -4,8 +4,12 @@
  */
 package et.com.inhousetraining.L12.util;
 
+import et.com.inhousetraining.L12.app.InventoryManager;
+import et.com.inhousetraining.L12.models.*;
+import et.com.inhousetraining.L12.repository.*;
+import et.com.inhousetraining.L12.services.InventoryService;
 import java.io.*;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -14,44 +18,36 @@ import java.util.List;
 public class FileData {
 
     public static void main(String[] args) {
+//        InventoryService is = new InventoryService();
+//        is.addWarehousesDatabseFromFile("/Users/eyu/Documents/warehouses.csv");
+//        
+//        InventoryManager inventoryManager = new InventoryManager();
+//        inventoryManager.startManager();
 
-        readFromFile();
-        //writeToFile();
-
-    }
-    
-    
-    static void readFromFile(){
         try {
-            ReadFile rf = new ReadFile("/Users/eyu/Documents/test.txt");
-            List<String> textData = rf.readFile();
-            
-            for(String s: textData){
-                System.out.println(s);
-            }
-            
+            WriteFile fileWriter = new WriteFile("/Users/eyu/Documents/test.csv",true);
+            fileWriter.writeToFile("3,Nokia,Feature phone");
+           
+
         } catch (FileNotFoundException e) {
             System.out.println("File was not found");
         } catch (IOException e) {
-            System.out.println("Error reading from file");
+            System.out.println(e.getMessage());
         }
+
     }
-    
-    
-    static void writeToFile(){
+
+    static void writeToFile() {
         try {
             WriteFile wf = new WriteFile("/Users/eyu/Documents/test.txt", true);
-            
+
             wf.writeToFile("Jhon Jack, Liam, Test");
-            
+
         } catch (FileNotFoundException e) {
             System.out.println("File was not found");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
-    
-    
-    
-    
+
 }

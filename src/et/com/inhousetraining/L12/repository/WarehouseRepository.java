@@ -5,6 +5,10 @@
 package et.com.inhousetraining.L12.repository;
 
 import et.com.inhousetraining.L12.models.*;
+import et.com.inhousetraining.L12.util.ReadFile;
+import et.com.inhousetraining.L12.util.WriteFile;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +18,7 @@ import java.util.List;
  */
 public class WarehouseRepository {
     
-    private static List<Warehouse> warehouses = new ArrayList<>();
+    public static List<Warehouse> warehouses = new ArrayList<>();
 
     
     public void addWarehouse(Warehouse warehouse) {
@@ -57,5 +61,65 @@ public class WarehouseRepository {
 
     public List<Warehouse> getAllWarehouses() {
         return warehouses;
+    }
+    
+    
+    public Warehouse parseWarehouse(String line){
+        String[] warehouseData = line.split(",");
+        Warehouse ws = new Warehouse();
+        ws.setWarehouseID(Integer.parseInt(warehouseData[0]));
+        ws.setLocation(warehouseData[1]);
+        ws.setCurrentQuantity(Integer.parseInt(warehouseData[2]));
+        ws.setMaxCapacity(Integer.parseInt(warehouseData[3]));
+
+        return ws;
+        
+    }
+    
+    public List<Warehouse> readWarehousesFromFile(String path){
+        try {
+            ReadFile rf = new ReadFile(path);
+            List<String> textData = rf.readFile();
+            List<Warehouse> warehouses = new ArrayList<>();
+            
+            for(String s: textData){
+                warehouses.add(parseWarehouse(s));
+            }
+            
+            return warehouses;
+            
+        } catch (FileNotFoundException e) {
+            System.out.println("File was not found");
+        } catch (IOException e) {
+            System.out.println("Error reading from file");
+        }
+        return null;
+    }
+    
+    
+    
+    
+    public void writeWarehouseToFile(String warehouse, String path, boolean append) {
+        try {
+            WriteFile wf = new WriteFile(path, append);
+
+            wf.writeToFile(warehouse);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File was not found");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void exportWarehousesToFile(String path) {
+        
+        for(int i=0; i< warehouses.size();i++){
+            if(i == 0){
+                writeWarehouseToFile(warehouses.get(i).convertToCSVFormat(),path, false);
+                continue;
+            }
+            writeWarehouseToFile(warehouses.get(i).convertToCSVFormat(),path, true);
+        }
     }
 }

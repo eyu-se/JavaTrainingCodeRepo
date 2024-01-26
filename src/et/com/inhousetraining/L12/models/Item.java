@@ -14,7 +14,16 @@ public class Item extends InventoryComponent {
     private int itemID;
     private String name;
     private String Description;
-
+    
+    
+    public Item(int itemID, String name, String Description) {
+            this.itemID = itemID;
+            this.name = name;
+            this.Description = Description;
+        }
+    
+    public Item(){
+    }
     /**
      * @return the itemID
      */
@@ -28,6 +37,8 @@ public class Item extends InventoryComponent {
     public void setItemID(int itemID) {
         this.itemID = itemID;
     }
+
+    
 
     /**
      * @return the name
@@ -63,6 +74,11 @@ public class Item extends InventoryComponent {
         System.out.println("Item Name :"+this.getName());
         System.out.println("Item Description :"+this.getDescription());
 
+    }
+
+    @Override
+    public String convertToCSVFormat() {
+        return itemID+","+name+","+Description;
     }
 
     

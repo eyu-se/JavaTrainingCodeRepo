@@ -24,6 +24,14 @@ public class InventoryService {
         this.warehouseRepository = new WarehouseRepository(); 
         this.itemRepository = new ItemRepository();
     }
+    
+    public void addWarehousesDatabseFromFile(String path){
+        WarehouseRepository.warehouses = warehouseRepository.readWarehousesFromFile(path);
+    }
+    
+    public void exportWarehousesDatabseToFile(String path){
+        warehouseRepository.exportWarehousesToFile(path);
+    }
 
     // Warehouse Operations
 
