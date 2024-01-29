@@ -13,24 +13,54 @@ import java.util.*;
  */
 public class Demo {
     public static void main(String[] args) {
-        GenricRepo<Item> itemsRepo = new GenricRepo<Item>(new ArrayList<Item>());
-        itemsRepo.add(new Item(2,"Item 2", "Test Description for item 1"));
-        
-        itemsRepo.add(new Item(3,"Item 3", "Test Description for item 3"));
-        
-        
-        for(Item i : itemsRepo.getAll()){
-            i.display();
-        }
-        
-        GenricRepo<Section> sectionsRepo = new GenricRepo<Section>(new ArrayList<Section>());
-        sectionsRepo.add(new Section(1,"Aisle A", 1, 4000));
-        sectionsRepo.add(new Section(2,"Aisle B", 2, 6000));
-        for(Section s : sectionsRepo.getAll()){
-            s.display();
-        }
+//        GenricRepo<Item> itemsRepo = new GenricRepo<Item>(new ArrayList<Item>());
+//        itemsRepo.add(new Item(2,"Item 2", "Test Description for item 1"));
+//        
+//        itemsRepo.add(new Item(3,"Item 3", "Test Description for item 3"));
+//        
+//        
+//        for(Item i : itemsRepo.getAll()){
+//            i.display();
+//        }
+//        
+//        GenricRepo<Section> sectionsRepo = new GenricRepo<Section>(new ArrayList<Section>());
+//        sectionsRepo.add(new Section(1,"Aisle A", 1, 4000));
+//        sectionsRepo.add(new Section(2,"Aisle B", 2, 6000));
+//        for(Section s : sectionsRepo.getAll()){
+//            s.display();
+//        }
 
+        ItemRepository itemsRepo = new ItemRepository();
+//        List<Item> items = itemsRepo.getAllItems();
+//        for(Item i: items){
+//            i.display();
+//        }
+//        
+//        Item updatedItem =new Item(1,"Laravel","A Programing Book About Laravel");
+//        itemsRepo.updateItem(updatedItem);
+//        
+//        
+//        items = itemsRepo.getAllItems();
+//        for(Item i: items){
+//            i.display();
+//        }
+//        Item item1 = itemsRepo.getItemById(1);
+//        item1.display();
 
+//          Item newItem1 = new Item("MovieDisk", "a pack of DVD Disks");
+//          itemsRepo.addItem(newItem1);
+//          
+          
+          
+            
+          itemsRepo.deleteItem(2);
+        List<Item> items = itemsRepo.getAllItems();
+            for(Item i: items){
+                i.display();
+            }
+
+        
+        
         
     }
 }

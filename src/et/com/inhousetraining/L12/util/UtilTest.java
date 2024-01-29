@@ -4,7 +4,7 @@
  */
 package et.com.inhousetraining.L12.util;
 
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.io.*;
 import java.util.List;
 import java.sql.Connection;
@@ -26,12 +26,15 @@ public class UtilTest {
         
         System.out.println("Geting existing data \n\n");
         getDataFromDB();
-
-        System.out.println("Inserting new Data into  \n\n");
-        insertDataInDB();
-
-        System.out.println("Get The new data   \n\n");
+        System.out.println("Generated primary key for warehouse "+insertDataInDB());
+        System.out.println("Geting  data after insert \n\n");
         getDataFromDB();
+
+//        System.out.println("Inserting new Data into  \n\n");
+//        insertDataInDB();
+//
+//        System.out.println("Get The new data   \n\n");
+//        getDataFromDB();
 
 
     }
@@ -86,7 +89,7 @@ public class UtilTest {
     
     static void getDataFromDB() {
     
-        String sql = "SELECT warehouseId, location, currentQuantity, maxCapacity " +
+        String sql = "SELECT warehouseID, location, currentQuantity, maxCapacity " +
                      "FROM warehouse";
         
         try (Connection conn = MySQLJDBCUtil.getConnection();
@@ -95,10 +98,10 @@ public class UtilTest {
            
             // loop through the result set
             while (rs.next()) {
-                System.out.println(rs.getString("warehouseId") + "\t" + 
+                System.out.println(rs.getInt("warehouseID") + "\t" + 
                                    rs.getString("location")  + "\t" +
-                                   rs.getString("currentQuantity")  + "\t" +
-                                   rs.getString("maxCapacity"));
+                                   rs.getInt("currentQuantity")  + "\t" +
+                                   rs.getInt("maxCapacity"));
                     
             }
         } catch (SQLException ex) {
@@ -123,8 +126,8 @@ public class UtilTest {
                 PreparedStatement pstmt = (PreparedStatement) conn.prepareStatement(sqlUpdate)) {
             // prepare data for update
             String newLocation = "DebreZeit";
-            int newCurrentQuantity = 2;
-            int newMaxCapacity = 10000;
+            int newCurrentQuantity = 20;
+            int newMaxCapacity = 9000;
             int warehouseID = 3;
             
             pstmt.setString(1, newLocation);
@@ -134,7 +137,9 @@ public class UtilTest {
             
             int rowAffected = pstmt.executeUpdate();
             System.out.println(String.format("Row affected %d", rowAffected));
-          
+            
+            
+               
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -157,7 +162,7 @@ public class UtilTest {
             ) {
             
             // set parameters for statement
-            pstmt.setString(1, "Jima");
+            pstmt.setString(1, "Gonder");
             pstmt.setInt(2, 0);
             pstmt.setInt(3, 9000);
      

@@ -54,7 +54,7 @@ public class WarehouseRepository {
     public void deleteWarehouse(int warehouseId){
         
 
-            String sql = "DELETE FROM warehouseWHERE warehouseID = ?";
+            String sql = "DELETE FROM warehouse WHERE warehouseID = ?";
 
             try (
                     Connection conn = MySQLJDBCUtil.getConnection();

@@ -21,6 +21,12 @@ public class Item extends InventoryComponent {
         this.Description = Description;
     }
     
+    public Item(String name, String Description) {
+   
+        this.name = name;
+        this.Description = Description;
+    }
+    
     public Item() {
     }
 
