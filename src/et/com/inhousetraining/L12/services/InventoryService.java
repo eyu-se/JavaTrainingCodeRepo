@@ -42,6 +42,10 @@ public class InventoryService {
     public void updateWarehouse(Warehouse updatedWarehouse) {
         warehouseRepository.updateWarehouse(updatedWarehouse);
     }
+    
+    public void deleteWarehouse(int warehouseId) {
+        warehouseRepository.deleteWarehouse(warehouseId);
+    }
 
     public List<Warehouse> getAllWarehouses() {
         return warehouseRepository.getAllWarehouses();

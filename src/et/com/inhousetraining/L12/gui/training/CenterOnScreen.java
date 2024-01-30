@@ -17,8 +17,11 @@ public class CenterOnScreen extends JFrame {
         setSize(300, 200);
         setTitle("CenterOnScreen");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
         Toolkit toolkit = getToolkit();
+        
         Dimension size = toolkit.getScreenSize();
+        
         setLocation(size.width / 2 - getWidth() / 2,
                 size.height / 2 - getHeight() / 2);
     }

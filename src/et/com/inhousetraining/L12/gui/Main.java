@@ -9,5 +9,8 @@ package et.com.inhousetraining.L12.gui;
  * @author eyu
  */
 public class Main {
-    
+    public static void main(String[] args) {
+        InventoryManagementScreen inventoryApp = new InventoryManagementScreen();
+        inventoryApp.setVisible(true);
+    }
 }

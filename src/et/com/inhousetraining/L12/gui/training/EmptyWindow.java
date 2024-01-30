@@ -15,7 +15,7 @@ public class EmptyWindow extends JFrame {
 
     public EmptyWindow() {
         setSize(300, 200);
-        setTitle("Simple");
+        setTitle("Simple Emty Window");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
