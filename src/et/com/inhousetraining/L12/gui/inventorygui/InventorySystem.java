@@ -24,7 +24,7 @@ public class InventorySystem extends JFrame implements ActionListener {
     public InventoryService inventoryService;
 
     
-    private JButton allBtn, addBtn, editBtn, viewBtn;
+    private JButton allBtn, addBtn, allItemBtn, addItemBtn;
 
     public InventorySystem(){
         setTitle("Inventory System");
@@ -51,21 +51,21 @@ public class InventorySystem extends JFrame implements ActionListener {
         // Initialize buttons
         allBtn = new JButton("View Warehouses");
         addBtn = new JButton("Add Warehouse");
-        editBtn = new JButton("Edit Warehouse");
-        viewBtn = new JButton("View Warehouse");
+        allItemBtn = new JButton("View Items");
+        addItemBtn = new JButton("Add Item");
 
         // Add action listeners to buttons
         allBtn.addActionListener(this);
         addBtn.addActionListener(this);
-        editBtn.addActionListener(this);
-        viewBtn.addActionListener(this);
+        allItemBtn.addActionListener(this);
+        addItemBtn.addActionListener(this);
 
         // Create a panel for buttons
         JPanel buttonPanel = new JPanel(new GridLayout(4, 1, 10, 10));
         buttonPanel.add(allBtn);
         buttonPanel.add(addBtn);
-        buttonPanel.add(editBtn);
-        buttonPanel.add(viewBtn);
+        buttonPanel.add(allItemBtn);
+        buttonPanel.add(addItemBtn);
 
         // Create a container
         Container container = getContentPane();
