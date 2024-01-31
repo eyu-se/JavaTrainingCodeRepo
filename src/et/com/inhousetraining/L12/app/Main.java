@@ -4,9 +4,11 @@
  */
 package et.com.inhousetraining.L12.app;
 
+import et.com.inhousetraining.L12.gui.inventorygui.InventorySystem;
 import et.com.inhousetraining.L12.services.*;
 import et.com.inhousetraining.L12.models.*;
 import et.com.inhousetraining.L12.repository.*;
+import java.util.List;
 
 import java.util.Scanner;
 
@@ -17,8 +19,13 @@ import java.util.Scanner;
 public class Main {
     
     public static void main(String[] args) {
-        InventoryManager inventoryManager = new InventoryManager();
-        inventoryManager.startManager();
+        //Command Line Menu Based
+//        InventoryManager inventoryManager = new InventoryManager();
+//        inventoryManager.startManager();
+
+        //GUI Based
+        InventorySystem inventorySystem = new InventorySystem();
+        inventorySystem.setVisible(true);
     }
     
     

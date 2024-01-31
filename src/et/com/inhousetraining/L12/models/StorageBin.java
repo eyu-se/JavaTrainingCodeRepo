@@ -9,7 +9,7 @@ package et.com.inhousetraining.L12.models;
  *
  * @author eyu
  */
-public class StorageBin {
+public class StorageBin extends InventoryComponent{
     
     private int binID;
     private int sectionID;
@@ -85,6 +85,19 @@ public class StorageBin {
      */
     public void setMaxCapacity(int maxCapacity) {
         this.maxCapacity = maxCapacity;
+    }
+    
+    
+    @Override
+    public void display() {
+        
+        System.out.println("StorageBin ID :"+this.getBinID());
+        System.out.println("StorageBin SectionId :"+this.getSectionID());
+        System.out.println("StorageBin ItemId :"+this.getItemId());
+        System.out.println("StorageBin CurrentQuantity :"+this.getQuantity());
+        System.out.println("StorageBin MaxCapacity :"+this.getMaxCapacity());
+
+
     }
     
 }
