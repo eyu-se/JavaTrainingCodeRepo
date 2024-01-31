@@ -97,7 +97,6 @@ public class InventorySystem extends JFrame implements ActionListener {
     
     
     public void changeToAddNewWarehouse(){
-        //setVisible(false);
         this.warehouseCreatePanel = new WarehouseCreate(this);
         container.remove(this.contentPanel);
         contentPanel = warehouseCreatePanel;
@@ -107,7 +106,6 @@ public class InventorySystem extends JFrame implements ActionListener {
     
     
     public void changeToEditWarehouse(int warehouseId){
-        //setVisible(false);
         this.warehouseUpdatePanel = new WarehouseEdit(warehouseId, this);
         container.remove(this.contentPanel);
         contentPanel = warehouseUpdatePanel;
@@ -117,7 +115,6 @@ public class InventorySystem extends JFrame implements ActionListener {
     
     
      public void changeToViewWarehouses(){
-        //setVisible(false);
         this.warehousesListPanel = new TableWarehousesListJpanel(this);
         container.remove(this.contentPanel);
         contentPanel = this.warehousesListPanel;

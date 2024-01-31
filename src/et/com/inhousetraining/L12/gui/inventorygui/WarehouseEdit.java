@@ -16,7 +16,6 @@ import java.awt.event.*;
 
 
 
-// Driver Code
 
 
 class WarehouseEdit extends JPanel implements ActionListener {
