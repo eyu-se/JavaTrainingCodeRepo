@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/parts/AddWarehouseForm.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/WarehouseForm.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/parts/EditWarehouseForm.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/repository/WarehouseRepository.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/models/Warehouse.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/EmptyWindow.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/parts/ViewWarehousesList.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/FlowTest.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/BorderLayoutExample.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/BoxLayoutTwoButtons.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/Main.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/BorderLayout.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/services/InventoryService.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/util/MySQLJDBCUtil.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/WarehouseManagementApp.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/NewJFrame.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/CAlculatorGrid.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/Buttons.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/CenterOnScreen.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/NewJFrame.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/util/UtilTest.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/InventoryManagementScreen.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/BorderTest.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/util/DbConnector.java</file>
+            <file>file:/Users/eyu/Documents/Trainings/Java/Codes/JavaTrainingCodeRepo/src/et/com/inhousetraining/L12/gui/training/BoxLayoutRigidAreaExample.java</file>
+        </group>
+    </open-files>
+</project-private>
